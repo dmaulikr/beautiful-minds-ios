@@ -1,0 +1,866 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56AA049F79530A1F9D2C9534 /* libPods-BeautifulMinds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5498C99F9DB48E07F5D53941 /* libPods-BeautifulMinds.a */; };
+		AD92CAE41C3778A3002F3F3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CAE31C3778A3002F3F3C /* main.m */; };
+		AD92CAE71C3778A3002F3F3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CAE61C3778A3002F3F3C /* AppDelegate.m */; };
+		AD92CAED1C3778A3002F3F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD92CAEB1C3778A3002F3F3C /* Main.storyboard */; };
+		AD92CAEF1C3778A3002F3F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD92CAEE1C3778A3002F3F3C /* Assets.xcassets */; };
+		AD92CAF21C3778A3002F3F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD92CAF01C3778A3002F3F3C /* LaunchScreen.storyboard */; };
+		AD92CAFD1C3778A3002F3F3C /* BeautifulMindsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CAFC1C3778A3002F3F3C /* BeautifulMindsTests.m */; };
+		AD92CB081C3778A4002F3F3C /* BeautifulMindsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB071C3778A4002F3F3C /* BeautifulMindsUITests.m */; };
+		AD92CB1C1C377AD1002F3F3C /* BMRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB1B1C377AD1002F3F3C /* BMRootVC.m */; };
+		AD92CB241C377B4F002F3F3C /* BMRoutingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB231C377B4F002F3F3C /* BMRoutingManager.m */; };
+		AD92CB271C377FFE002F3F3C /* BMHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB261C377FFE002F3F3C /* BMHomeVC.m */; };
+		AD92CB2B1C378163002F3F3C /* BMWriteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB2A1C378163002F3F3C /* BMWriteVC.m */; };
+		AD92CB2F1C378375002F3F3C /* BMProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB2E1C378375002F3F3C /* BMProfileVC.m */; };
+		AD92CB391C37850C002F3F3C /* BMTabBarVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB381C37850C002F3F3C /* BMTabBarVIew.m */; };
+		AD92CB3E1C382CF3002F3F3C /* BMPaintCode.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB3D1C382CF3002F3F3C /* BMPaintCode.m */; };
+		AD92CB421C3849CC002F3F3C /* BMPostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB411C3849CC002F3F3C /* BMPostCollectionViewCell.m */; };
+		AD92CB461C385583002F3F3C /* UIColor+BM.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB451C385583002F3F3C /* UIColor+BM.m */; };
+		AD92CB4A1C385859002F3F3C /* BMStoryDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB491C385859002F3F3C /* BMStoryDetailVC.m */; };
+		AD92CB4E1C385C9C002F3F3C /* BMNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB4D1C385C9C002F3F3C /* BMNavBarView.m */; };
+		AD92CB521C386324002F3F3C /* BMBaseNavBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB511C386324002F3F3C /* BMBaseNavBarVC.m */; };
+		AD92CB561C386707002F3F3C /* UIFont+BM.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB551C386707002F3F3C /* UIFont+BM.m */; };
+		AD92CB5C1C3867AC002F3F3C /* ProximaNova-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD92CB591C3867AC002F3F3C /* ProximaNova-Bold.ttf */; };
+		AD92CB5D1C3867AC002F3F3C /* ProximaNova-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD92CB5A1C3867AC002F3F3C /* ProximaNova-Reg.ttf */; };
+		AD92CB5E1C3867AC002F3F3C /* ProximaNova-Sbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD92CB5B1C3867AC002F3F3C /* ProximaNova-Sbold.ttf */; };
+		AD92CB611C3869D4002F3F3C /* BMThirdPartyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB601C3869D4002F3F3C /* BMThirdPartyManager.m */; };
+		AD92CB651C3878B8002F3F3C /* BMUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB641C3878B8002F3F3C /* BMUIManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD92CAF91C3778A3002F3F3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD92CAD71C3778A3002F3F3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD92CADE1C3778A3002F3F3C;
+			remoteInfo = BeautifulMinds;
+		};
+		AD92CB041C3778A4002F3F3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD92CAD71C3778A3002F3F3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD92CADE1C3778A3002F3F3C;
+			remoteInfo = BeautifulMinds;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5498C99F9DB48E07F5D53941 /* libPods-BeautifulMinds.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeautifulMinds.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DF1CAD6F569C749124093F5 /* Pods-BeautifulMinds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautifulMinds.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeautifulMinds/Pods-BeautifulMinds.release.xcconfig"; sourceTree = "<group>"; };
+		AD92CADF1C3778A3002F3F3C /* BeautifulMinds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautifulMinds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD92CAE31C3778A3002F3F3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD92CAE51C3778A3002F3F3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AD92CAE61C3778A3002F3F3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AD92CAEC1C3778A3002F3F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD92CAEE1C3778A3002F3F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD92CAF11C3778A3002F3F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD92CAF31C3778A3002F3F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD92CAF81C3778A3002F3F3C /* BeautifulMindsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautifulMindsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD92CAFC1C3778A3002F3F3C /* BeautifulMindsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeautifulMindsTests.m; sourceTree = "<group>"; };
+		AD92CAFE1C3778A3002F3F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD92CB031C3778A4002F3F3C /* BeautifulMindsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautifulMindsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD92CB071C3778A4002F3F3C /* BeautifulMindsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeautifulMindsUITests.m; sourceTree = "<group>"; };
+		AD92CB091C3778A4002F3F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD92CB1A1C377AD1002F3F3C /* BMRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMRootVC.h; sourceTree = "<group>"; };
+		AD92CB1B1C377AD1002F3F3C /* BMRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMRootVC.m; sourceTree = "<group>"; };
+		AD92CB221C377B4F002F3F3C /* BMRoutingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMRoutingManager.h; sourceTree = "<group>"; };
+		AD92CB231C377B4F002F3F3C /* BMRoutingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMRoutingManager.m; sourceTree = "<group>"; };
+		AD92CB251C377FFE002F3F3C /* BMHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMHomeVC.h; path = Home/BMHomeVC.h; sourceTree = "<group>"; };
+		AD92CB261C377FFE002F3F3C /* BMHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMHomeVC.m; path = Home/BMHomeVC.m; sourceTree = "<group>"; };
+		AD92CB291C378163002F3F3C /* BMWriteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMWriteVC.h; path = Write/BMWriteVC.h; sourceTree = "<group>"; };
+		AD92CB2A1C378163002F3F3C /* BMWriteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMWriteVC.m; path = Write/BMWriteVC.m; sourceTree = "<group>"; };
+		AD92CB2D1C378375002F3F3C /* BMProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMProfileVC.h; path = Profile/BMProfileVC.h; sourceTree = "<group>"; };
+		AD92CB2E1C378375002F3F3C /* BMProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMProfileVC.m; path = Profile/BMProfileVC.m; sourceTree = "<group>"; };
+		AD92CB371C37850C002F3F3C /* BMTabBarVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTabBarVIew.h; sourceTree = "<group>"; };
+		AD92CB381C37850C002F3F3C /* BMTabBarVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTabBarVIew.m; sourceTree = "<group>"; };
+		AD92CB3C1C382CF3002F3F3C /* BMPaintCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPaintCode.h; sourceTree = "<group>"; };
+		AD92CB3D1C382CF3002F3F3C /* BMPaintCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPaintCode.m; sourceTree = "<group>"; };
+		AD92CB3F1C382D1F002F3F3C /* BMPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPrefixHeader.pch; sourceTree = "<group>"; };
+		AD92CB401C3849CC002F3F3C /* BMPostCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMPostCollectionViewCell.h; path = CollectionViewCells/BMPostCollectionViewCell.h; sourceTree = "<group>"; };
+		AD92CB411C3849CC002F3F3C /* BMPostCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMPostCollectionViewCell.m; path = CollectionViewCells/BMPostCollectionViewCell.m; sourceTree = "<group>"; };
+		AD92CB441C385583002F3F3C /* UIColor+BM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+BM.h"; path = "Categories/UIColor+BM.h"; sourceTree = "<group>"; };
+		AD92CB451C385583002F3F3C /* UIColor+BM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+BM.m"; path = "Categories/UIColor+BM.m"; sourceTree = "<group>"; };
+		AD92CB481C385859002F3F3C /* BMStoryDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMStoryDetailVC.h; path = StoryDetail/BMStoryDetailVC.h; sourceTree = "<group>"; };
+		AD92CB491C385859002F3F3C /* BMStoryDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMStoryDetailVC.m; path = StoryDetail/BMStoryDetailVC.m; sourceTree = "<group>"; };
+		AD92CB4C1C385C9C002F3F3C /* BMNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMNavBarView.h; path = NavBar/BMNavBarView.h; sourceTree = "<group>"; };
+		AD92CB4D1C385C9C002F3F3C /* BMNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMNavBarView.m; path = NavBar/BMNavBarView.m; sourceTree = "<group>"; };
+		AD92CB501C386324002F3F3C /* BMBaseNavBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMBaseNavBarVC.h; path = Base/BMBaseNavBarVC.h; sourceTree = "<group>"; };
+		AD92CB511C386324002F3F3C /* BMBaseNavBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMBaseNavBarVC.m; path = Base/BMBaseNavBarVC.m; sourceTree = "<group>"; };
+		AD92CB541C386707002F3F3C /* UIFont+BM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+BM.h"; path = "Categories/UIFont+BM.h"; sourceTree = "<group>"; };
+		AD92CB551C386707002F3F3C /* UIFont+BM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+BM.m"; path = "Categories/UIFont+BM.m"; sourceTree = "<group>"; };
+		AD92CB591C3867AC002F3F3C /* ProximaNova-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.ttf"; sourceTree = "<group>"; };
+		AD92CB5A1C3867AC002F3F3C /* ProximaNova-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Reg.ttf"; sourceTree = "<group>"; };
+		AD92CB5B1C3867AC002F3F3C /* ProximaNova-Sbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Sbold.ttf"; sourceTree = "<group>"; };
+		AD92CB5F1C3869D4002F3F3C /* BMThirdPartyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMThirdPartyManager.h; path = ThirdParty/BMThirdPartyManager.h; sourceTree = "<group>"; };
+		AD92CB601C3869D4002F3F3C /* BMThirdPartyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMThirdPartyManager.m; path = ThirdParty/BMThirdPartyManager.m; sourceTree = "<group>"; };
+		AD92CB631C3878B8002F3F3C /* BMUIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMUIManager.h; path = UI/BMUIManager.h; sourceTree = "<group>"; };
+		AD92CB641C3878B8002F3F3C /* BMUIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMUIManager.m; path = UI/BMUIManager.m; sourceTree = "<group>"; };
+		BD5F5EDAC1FB874110A98416 /* Pods-BeautifulMinds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautifulMinds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeautifulMinds/Pods-BeautifulMinds.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD92CADC1C3778A3002F3F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56AA049F79530A1F9D2C9534 /* libPods-BeautifulMinds.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD92CAF51C3778A3002F3F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD92CB001C3778A4002F3F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F3BEC5F4E0D9B7205D277E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5498C99F9DB48E07F5D53941 /* libPods-BeautifulMinds.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50E63FA3CE77E00504607025 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD5F5EDAC1FB874110A98416 /* Pods-BeautifulMinds.debug.xcconfig */,
+				5DF1CAD6F569C749124093F5 /* Pods-BeautifulMinds.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AD92CAD61C3778A3002F3F3C = {
+			isa = PBXGroup;
+			children = (
+				AD92CAE11C3778A3002F3F3C /* BeautifulMinds */,
+				AD92CAFB1C3778A3002F3F3C /* BeautifulMindsTests */,
+				AD92CB061C3778A4002F3F3C /* BeautifulMindsUITests */,
+				AD92CAE01C3778A3002F3F3C /* Products */,
+				50E63FA3CE77E00504607025 /* Pods */,
+				2F3BEC5F4E0D9B7205D277E7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AD92CAE01C3778A3002F3F3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CADF1C3778A3002F3F3C /* BeautifulMinds.app */,
+				AD92CAF81C3778A3002F3F3C /* BeautifulMindsTests.xctest */,
+				AD92CB031C3778A4002F3F3C /* BeautifulMindsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD92CAE11C3778A3002F3F3C /* BeautifulMinds */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CAE51C3778A3002F3F3C /* AppDelegate.h */,
+				AD92CAE61C3778A3002F3F3C /* AppDelegate.m */,
+				AD92CB471C385589002F3F3C /* Categories */,
+				AD92CB3A1C382CF3002F3F3C /* Assets */,
+				AD92CB351C37850C002F3F3C /* Views */,
+				AD92CB201C377B4F002F3F3C /* Managers */,
+				AD92CB181C377AD1002F3F3C /* ViewControllers */,
+				AD92CAEB1C3778A3002F3F3C /* Main.storyboard */,
+				AD92CAEE1C3778A3002F3F3C /* Assets.xcassets */,
+				AD92CAF01C3778A3002F3F3C /* LaunchScreen.storyboard */,
+				AD92CAF31C3778A3002F3F3C /* Info.plist */,
+				AD92CB3F1C382D1F002F3F3C /* BMPrefixHeader.pch */,
+				AD92CAE21C3778A3002F3F3C /* Supporting Files */,
+			);
+			path = BeautifulMinds;
+			sourceTree = "<group>";
+		};
+		AD92CAE21C3778A3002F3F3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CAE31C3778A3002F3F3C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD92CAFB1C3778A3002F3F3C /* BeautifulMindsTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CAFC1C3778A3002F3F3C /* BeautifulMindsTests.m */,
+				AD92CAFE1C3778A3002F3F3C /* Info.plist */,
+			);
+			path = BeautifulMindsTests;
+			sourceTree = "<group>";
+		};
+		AD92CB061C3778A4002F3F3C /* BeautifulMindsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB071C3778A4002F3F3C /* BeautifulMindsUITests.m */,
+				AD92CB091C3778A4002F3F3C /* Info.plist */,
+			);
+			path = BeautifulMindsUITests;
+			sourceTree = "<group>";
+		};
+		AD92CB181C377AD1002F3F3C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB191C377AD1002F3F3C /* Root */,
+				AD92CB281C378002002F3F3C /* Home */,
+				AD92CB2C1C378169002F3F3C /* Write */,
+				AD92CB301C37837B002F3F3C /* Profile */,
+				AD92CB4B1C38585C002F3F3C /* StoryDetail */,
+				AD92CB531C38632A002F3F3C /* Base */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AD92CB191C377AD1002F3F3C /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB1A1C377AD1002F3F3C /* BMRootVC.h */,
+				AD92CB1B1C377AD1002F3F3C /* BMRootVC.m */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		AD92CB201C377B4F002F3F3C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB211C377B4F002F3F3C /* Routing */,
+				AD92CB621C3869D9002F3F3C /* ThirdParty */,
+				AD92CB661C3878BC002F3F3C /* UI */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AD92CB211C377B4F002F3F3C /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB221C377B4F002F3F3C /* BMRoutingManager.h */,
+				AD92CB231C377B4F002F3F3C /* BMRoutingManager.m */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		AD92CB281C378002002F3F3C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB251C377FFE002F3F3C /* BMHomeVC.h */,
+				AD92CB261C377FFE002F3F3C /* BMHomeVC.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		AD92CB2C1C378169002F3F3C /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB291C378163002F3F3C /* BMWriteVC.h */,
+				AD92CB2A1C378163002F3F3C /* BMWriteVC.m */,
+			);
+			name = Write;
+			sourceTree = "<group>";
+		};
+		AD92CB301C37837B002F3F3C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB2D1C378375002F3F3C /* BMProfileVC.h */,
+				AD92CB2E1C378375002F3F3C /* BMProfileVC.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		AD92CB351C37850C002F3F3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB361C37850C002F3F3C /* TabBar */,
+				AD92CB431C3849D0002F3F3C /* CollectionViewCells */,
+				AD92CB4F1C385CA3002F3F3C /* NavBar */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AD92CB361C37850C002F3F3C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB371C37850C002F3F3C /* BMTabBarVIew.h */,
+				AD92CB381C37850C002F3F3C /* BMTabBarVIew.m */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		AD92CB3A1C382CF3002F3F3C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB571C3867AC002F3F3C /* Fonts */,
+				AD92CB3B1C382CF3002F3F3C /* PaintCode */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		AD92CB3B1C382CF3002F3F3C /* PaintCode */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB3C1C382CF3002F3F3C /* BMPaintCode.h */,
+				AD92CB3D1C382CF3002F3F3C /* BMPaintCode.m */,
+			);
+			path = PaintCode;
+			sourceTree = "<group>";
+		};
+		AD92CB431C3849D0002F3F3C /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB401C3849CC002F3F3C /* BMPostCollectionViewCell.h */,
+				AD92CB411C3849CC002F3F3C /* BMPostCollectionViewCell.m */,
+			);
+			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		AD92CB471C385589002F3F3C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB441C385583002F3F3C /* UIColor+BM.h */,
+				AD92CB451C385583002F3F3C /* UIColor+BM.m */,
+				AD92CB541C386707002F3F3C /* UIFont+BM.h */,
+				AD92CB551C386707002F3F3C /* UIFont+BM.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		AD92CB4B1C38585C002F3F3C /* StoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB481C385859002F3F3C /* BMStoryDetailVC.h */,
+				AD92CB491C385859002F3F3C /* BMStoryDetailVC.m */,
+			);
+			name = StoryDetail;
+			sourceTree = "<group>";
+		};
+		AD92CB4F1C385CA3002F3F3C /* NavBar */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB4C1C385C9C002F3F3C /* BMNavBarView.h */,
+				AD92CB4D1C385C9C002F3F3C /* BMNavBarView.m */,
+			);
+			name = NavBar;
+			sourceTree = "<group>";
+		};
+		AD92CB531C38632A002F3F3C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB501C386324002F3F3C /* BMBaseNavBarVC.h */,
+				AD92CB511C386324002F3F3C /* BMBaseNavBarVC.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		AD92CB571C3867AC002F3F3C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB581C3867AC002F3F3C /* ProximaNova */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AD92CB581C3867AC002F3F3C /* ProximaNova */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB591C3867AC002F3F3C /* ProximaNova-Bold.ttf */,
+				AD92CB5A1C3867AC002F3F3C /* ProximaNova-Reg.ttf */,
+				AD92CB5B1C3867AC002F3F3C /* ProximaNova-Sbold.ttf */,
+			);
+			path = ProximaNova;
+			sourceTree = "<group>";
+		};
+		AD92CB621C3869D9002F3F3C /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB5F1C3869D4002F3F3C /* BMThirdPartyManager.h */,
+				AD92CB601C3869D4002F3F3C /* BMThirdPartyManager.m */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		AD92CB661C3878BC002F3F3C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AD92CB631C3878B8002F3F3C /* BMUIManager.h */,
+				AD92CB641C3878B8002F3F3C /* BMUIManager.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD92CADE1C3778A3002F3F3C /* BeautifulMinds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD92CB0C1C3778A4002F3F3C /* Build configuration list for PBXNativeTarget "BeautifulMinds" */;
+			buildPhases = (
+				61E3D3B20A9EB0C0CF8C9940 /* Check Pods Manifest.lock */,
+				AD92CADB1C3778A3002F3F3C /* Sources */,
+				AD92CADC1C3778A3002F3F3C /* Frameworks */,
+				AD92CADD1C3778A3002F3F3C /* Resources */,
+				19DB9BF6C1FC8BB7DB6287D0 /* Embed Pods Frameworks */,
+				F3850B408AE340C325ACEB9E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeautifulMinds;
+			productName = BeautifulMinds;
+			productReference = AD92CADF1C3778A3002F3F3C /* BeautifulMinds.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AD92CAF71C3778A3002F3F3C /* BeautifulMindsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD92CB0F1C3778A4002F3F3C /* Build configuration list for PBXNativeTarget "BeautifulMindsTests" */;
+			buildPhases = (
+				AD92CAF41C3778A3002F3F3C /* Sources */,
+				AD92CAF51C3778A3002F3F3C /* Frameworks */,
+				AD92CAF61C3778A3002F3F3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD92CAFA1C3778A3002F3F3C /* PBXTargetDependency */,
+			);
+			name = BeautifulMindsTests;
+			productName = BeautifulMindsTests;
+			productReference = AD92CAF81C3778A3002F3F3C /* BeautifulMindsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AD92CB021C3778A4002F3F3C /* BeautifulMindsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD92CB121C3778A4002F3F3C /* Build configuration list for PBXNativeTarget "BeautifulMindsUITests" */;
+			buildPhases = (
+				AD92CAFF1C3778A4002F3F3C /* Sources */,
+				AD92CB001C3778A4002F3F3C /* Frameworks */,
+				AD92CB011C3778A4002F3F3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD92CB051C3778A4002F3F3C /* PBXTargetDependency */,
+			);
+			name = BeautifulMindsUITests;
+			productName = BeautifulMindsUITests;
+			productReference = AD92CB031C3778A4002F3F3C /* BeautifulMindsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD92CAD71C3778A3002F3F3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BM;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Alminty;
+				TargetAttributes = {
+					AD92CADE1C3778A3002F3F3C = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					AD92CAF71C3778A3002F3F3C = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = AD92CADE1C3778A3002F3F3C;
+					};
+					AD92CB021C3778A4002F3F3C = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = AD92CADE1C3778A3002F3F3C;
+					};
+				};
+			};
+			buildConfigurationList = AD92CADA1C3778A3002F3F3C /* Build configuration list for PBXProject "BeautifulMinds" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD92CAD61C3778A3002F3F3C;
+			productRefGroup = AD92CAE01C3778A3002F3F3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD92CADE1C3778A3002F3F3C /* BeautifulMinds */,
+				AD92CAF71C3778A3002F3F3C /* BeautifulMindsTests */,
+				AD92CB021C3778A4002F3F3C /* BeautifulMindsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD92CADD1C3778A3002F3F3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD92CAF21C3778A3002F3F3C /* LaunchScreen.storyboard in Resources */,
+				AD92CAEF1C3778A3002F3F3C /* Assets.xcassets in Resources */,
+				AD92CB5E1C3867AC002F3F3C /* ProximaNova-Sbold.ttf in Resources */,
+				AD92CB5C1C3867AC002F3F3C /* ProximaNova-Bold.ttf in Resources */,
+				AD92CB5D1C3867AC002F3F3C /* ProximaNova-Reg.ttf in Resources */,
+				AD92CAED1C3778A3002F3F3C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD92CAF61C3778A3002F3F3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD92CB011C3778A4002F3F3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19DB9BF6C1FC8BB7DB6287D0 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeautifulMinds/Pods-BeautifulMinds-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61E3D3B20A9EB0C0CF8C9940 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F3850B408AE340C325ACEB9E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeautifulMinds/Pods-BeautifulMinds-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD92CADB1C3778A3002F3F3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD92CB4A1C385859002F3F3C /* BMStoryDetailVC.m in Sources */,
+				AD92CAE71C3778A3002F3F3C /* AppDelegate.m in Sources */,
+				AD92CB2F1C378375002F3F3C /* BMProfileVC.m in Sources */,
+				AD92CB3E1C382CF3002F3F3C /* BMPaintCode.m in Sources */,
+				AD92CB461C385583002F3F3C /* UIColor+BM.m in Sources */,
+				AD92CB611C3869D4002F3F3C /* BMThirdPartyManager.m in Sources */,
+				AD92CB2B1C378163002F3F3C /* BMWriteVC.m in Sources */,
+				AD92CB1C1C377AD1002F3F3C /* BMRootVC.m in Sources */,
+				AD92CB4E1C385C9C002F3F3C /* BMNavBarView.m in Sources */,
+				AD92CB421C3849CC002F3F3C /* BMPostCollectionViewCell.m in Sources */,
+				AD92CB271C377FFE002F3F3C /* BMHomeVC.m in Sources */,
+				AD92CAE41C3778A3002F3F3C /* main.m in Sources */,
+				AD92CB241C377B4F002F3F3C /* BMRoutingManager.m in Sources */,
+				AD92CB521C386324002F3F3C /* BMBaseNavBarVC.m in Sources */,
+				AD92CB391C37850C002F3F3C /* BMTabBarVIew.m in Sources */,
+				AD92CB561C386707002F3F3C /* UIFont+BM.m in Sources */,
+				AD92CB651C3878B8002F3F3C /* BMUIManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD92CAF41C3778A3002F3F3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD92CAFD1C3778A3002F3F3C /* BeautifulMindsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD92CAFF1C3778A4002F3F3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD92CB081C3778A4002F3F3C /* BeautifulMindsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD92CAFA1C3778A3002F3F3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD92CADE1C3778A3002F3F3C /* BeautifulMinds */;
+			targetProxy = AD92CAF91C3778A3002F3F3C /* PBXContainerItemProxy */;
+		};
+		AD92CB051C3778A4002F3F3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD92CADE1C3778A3002F3F3C /* BeautifulMinds */;
+			targetProxy = AD92CB041C3778A4002F3F3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AD92CAEB1C3778A3002F3F3C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD92CAEC1C3778A3002F3F3C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AD92CAF01C3778A3002F3F3C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD92CAF11C3778A3002F3F3C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD92CB0A1C3778A4002F3F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD92CB0B1C3778A4002F3F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD92CB0D1C3778A4002F3F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD5F5EDAC1FB874110A98416 /* Pods-BeautifulMinds.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BeautifulMinds/BMPrefixHeader.pch";
+				INFOPLIST_FILE = BeautifulMinds/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alminty.BeautifulMinds;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AD92CB0E1C3778A4002F3F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DF1CAD6F569C749124093F5 /* Pods-BeautifulMinds.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BeautifulMinds/BMPrefixHeader.pch";
+				INFOPLIST_FILE = BeautifulMinds/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alminty.BeautifulMinds;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AD92CB101C3778A4002F3F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BeautifulMindsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alminty.BeautifulMindsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeautifulMinds.app/BeautifulMinds";
+			};
+			name = Debug;
+		};
+		AD92CB111C3778A4002F3F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BeautifulMindsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alminty.BeautifulMindsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeautifulMinds.app/BeautifulMinds";
+			};
+			name = Release;
+		};
+		AD92CB131C3778A4002F3F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BeautifulMindsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alminty.BeautifulMindsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BeautifulMinds;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		AD92CB141C3778A4002F3F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BeautifulMindsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alminty.BeautifulMindsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BeautifulMinds;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD92CADA1C3778A3002F3F3C /* Build configuration list for PBXProject "BeautifulMinds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD92CB0A1C3778A4002F3F3C /* Debug */,
+				AD92CB0B1C3778A4002F3F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD92CB0C1C3778A4002F3F3C /* Build configuration list for PBXNativeTarget "BeautifulMinds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD92CB0D1C3778A4002F3F3C /* Debug */,
+				AD92CB0E1C3778A4002F3F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD92CB0F1C3778A4002F3F3C /* Build configuration list for PBXNativeTarget "BeautifulMindsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD92CB101C3778A4002F3F3C /* Debug */,
+				AD92CB111C3778A4002F3F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD92CB121C3778A4002F3F3C /* Build configuration list for PBXNativeTarget "BeautifulMindsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD92CB131C3778A4002F3F3C /* Debug */,
+				AD92CB141C3778A4002F3F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD92CAD71C3778A3002F3F3C /* Project object */;
+}
