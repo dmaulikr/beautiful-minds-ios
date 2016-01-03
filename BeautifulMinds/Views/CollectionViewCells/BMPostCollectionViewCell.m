@@ -16,6 +16,12 @@
       
       self.margin = 20;
       
+      self.backgroundColor = [UIColor clearColor];
+      
+      self.spacingView = [[UIView alloc]init];
+      self.spacingView.backgroundColor = [UIColor whiteColor];
+      [self addSubview:self.spacingView];
+      
       self.createdAtLabel = [[UILabel alloc]init];
       self.createdAtLabel.font = [UIFont BMTextFontWithSize:12];
       self.createdAtLabel.textColor = [UIColor lightGrayColor];
@@ -40,9 +46,7 @@
       self.readMoreLabel.hidden = YES;
       [self addSubview:self.readMoreLabel];
     
-    self.spacingView = [[UIView alloc]init];
-    self.spacingView.backgroundColor = [UIColor BMLightGrey];
-    [self addSubview:self.spacingView];
+    
   }
   return self;
 }
@@ -76,7 +80,7 @@
         self.readMoreLabel.hidden = YES;
     }
     
-    self.spacingView.frame = CGRectMake(0, CGRectGetHeight(self.bounds)-10, CGRectGetWidth(self.frame), 10);
+    self.spacingView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.bounds)-10);
 }
 
 -(CGFloat)getCellHeightWithObject:(PFObject *)object {

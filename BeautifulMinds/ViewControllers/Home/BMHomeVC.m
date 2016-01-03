@@ -13,6 +13,7 @@
 {
   NSArray *dataArray;
   UIRefreshControl *refresh;
+  UIImageView *backgroundImageView;
 }
 @property (nonatomic, strong) UICollectionView *mainCollectionView;
 
@@ -26,14 +27,44 @@
   
   self.view.backgroundColor = [UIColor whiteColor];
   
+  [self addBackgroundBlurAnimation];
   [self setupNavBar];
   [self setupCollectionView];
   [self getHomeData];
 }
 
+-(void)addBackgroundBlurAnimation {
+    backgroundImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds),CGRectGetHeight(self.view.bounds)*2)];
+    backgroundImageView.image = [UIImage imageNamed:@"background.jpg"];
+    backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
+    [self.view addSubview:backgroundImageView];
+    backgroundImageView.hidden = YES;
+    
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIVisualEffectView *blurredView = [[UIVisualEffectView alloc]initWithEffect:effect];
+    blurredView.frame = self.view.bounds;
+    [self.view addSubview:blurredView];
+    
+    [self startBackgroundAnimation];
+}
+
+-(void)startBackgroundAnimation {
+    [UIView animateWithDuration:25 animations:^{
+        backgroundImageView.frame = CGRectMake(0, -CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds),CGRectGetHeight(self.view.bounds)*2);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:25 animations:^{
+            backgroundImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds),CGRectGetHeight(self.view.bounds)*2);
+        } completion:^(BOOL finished) {
+            [self startBackgroundAnimation];
+        }];
+    }];
+}
+
 -(void)setupNavBar {
   self.navigationController.navigationBar.hidden = YES;
   [self.navBar setupForHomePage];
+    self.navBar.backgroundColor = [UIColor whiteColor];
+    [self.view bringSubviewToFront:self.navBar];
   
 }
 
@@ -45,7 +76,7 @@
   self.mainCollectionView.delegate = self;
   self.mainCollectionView.dataSource = self;
   [self.mainCollectionView registerClass:[BMPostCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
-  self.mainCollectionView.backgroundColor = [UIColor whiteColor];
+  self.mainCollectionView.backgroundColor = [UIColor clearColor];
   [self.view addSubview:self.mainCollectionView];
   
   refresh = [[UIRefreshControl alloc]init];
@@ -62,8 +93,10 @@
   [query orderByDescending:@"createdAt"];
   [query whereKey:@"isApproved" equalTo:[NSNumber numberWithBool:YES]];
   [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-    NSLog(@"%@", objects);
+//    NSLog(@"%@", objects);
     dataArray = objects;
+    
+    backgroundImageView.hidden = NO;
     [self.mainCollectionView reloadData];
     [refresh endRefreshing];
   }];

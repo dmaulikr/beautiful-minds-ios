@@ -30,6 +30,10 @@
       [self createBtnWithIndex:2 text:@"Profile" iconImage:nil action:@selector(profileBtnPressed:)];
       
       [self selectBtnWithIndex:0];
+        
+        UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), 1)];
+        line.backgroundColor = [UIColor lightGrayColor];
+        [self addSubview:line];
     }
     return self;
 }

@@ -54,8 +54,18 @@
   
 }
 
+-(void)setupForRegiatrationVC {
+    self.registrationSegment = [[UISegmentedControl alloc]initWithItems:@[@"LOGIN",@"SIGN UP"]];
+    self.registrationSegment.center = CGPointMake(CGRectGetWidth(self.bounds)/2, CGRectGetHeight(self.bounds)/2+10);
+    [self addSubview:self.registrationSegment];
+    [self.registrationSegment setSelectedSegmentIndex:0];
+    [self leftBtnIsBack];
+}
+
 -(void)rightBtnIsSubmit {
   [self.rightBtn setImage:[BMPaintCode imageOfIconSubmitBlack] forState:UIControlStateNormal];
 }
+
+
 
 @end

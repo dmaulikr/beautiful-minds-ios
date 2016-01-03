@@ -13,10 +13,12 @@
 @property (nonatomic, strong) UIButton *leftBtn;
 @property (nonatomic, strong) UIButton *centerBtn;
 @property (nonatomic, strong) UIButton *rightBtn;
+@property (nonatomic, strong) UISegmentedControl *registrationSegment;
 
 -(void)leftBtnIsBack;
 -(void)setupForHomePage;
 -(void)setupForWriteVC;
+-(void)setupForRegiatrationVC;
 -(void)rightBtnIsSubmit;
 
 @end
