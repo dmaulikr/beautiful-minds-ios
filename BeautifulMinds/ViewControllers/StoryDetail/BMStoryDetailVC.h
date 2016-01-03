@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) PFObject *storyObject;
 
+@property (nonatomic, strong) UILabel *createdAtLabel;
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *storyLabel;
 
