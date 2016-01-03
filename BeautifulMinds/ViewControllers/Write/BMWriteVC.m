@@ -95,8 +95,13 @@
     postObject[@"isApproved"] = @NO;
     postObject[@"ordinalValue"] = @0;
     postObject[@"tags"] = @[];
-    postObject[@"author"] = @"Anonymous";
-    
+    PFUser *user = [PFUser currentUser];
+    postObject[@"authorId"] = user.objectId;
+    postObject[@"authorDisplayName"] = user[@"displayName"] ? : @"";
+    postObject[@"authorAvatarUrl"] = user[@"authorAvatarUrl"] ? : @"";
+    postObject[@"comments"] = @[];
+    postObject[@"likedBy"] = @[];
+      
     [SVProgressHUD showWithStatus:@"Submitting"];
     [postObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
       if (error) {

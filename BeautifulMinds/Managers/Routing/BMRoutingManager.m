@@ -11,6 +11,7 @@
 #import "BMWriteVC.h"
 #import "BMProfileVC.h"
 #import "BMStoryDetailVC.h"
+#import "BMRegistrationVC.h"
 
 @interface BMRoutingManager ()
 
@@ -92,12 +93,21 @@
 }
 
 -(void)goToWriteVC {
-  if (self.writeVC) {
-    [self.rootVC.view bringSubviewToFront:self.writeVC.view];
-    [self.rootVC.view bringSubviewToFront:self.rootVC.tabBar];
-    [self.rootVC.tabBar selectBtnWithIndex:1];
-    [self.writeVC.bodyTextView becomeFirstResponder];
-  }
+    
+    if (![[BMUserManager shared]isCurrentUser]) {
+        
+        BMRegistrationVC *registrationVC = [BMRegistrationVC new];
+        [self.rootVC presentViewController:registrationVC animated:YES completion:nil];
+        return;
+    }
+    
+    if (self.writeVC) {
+        [[PFUser currentUser] fetchInBackground];
+        [self.rootVC.view bringSubviewToFront:self.writeVC.view];
+        [self.rootVC.view bringSubviewToFront:self.rootVC.tabBar];
+        [self.rootVC.tabBar selectBtnWithIndex:1];
+        [self.writeVC.bodyTextView becomeFirstResponder];
+    }
 }
 
 -(void)goToStoryDetailVCFromHomeVC:(PFObject *)storyObject {

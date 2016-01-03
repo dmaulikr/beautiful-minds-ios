@@ -33,6 +33,9 @@
 		AD92CB5E1C3867AC002F3F3C /* ProximaNova-Sbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD92CB5B1C3867AC002F3F3C /* ProximaNova-Sbold.ttf */; };
 		AD92CB611C3869D4002F3F3C /* BMThirdPartyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB601C3869D4002F3F3C /* BMThirdPartyManager.m */; };
 		AD92CB651C3878B8002F3F3C /* BMUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB641C3878B8002F3F3C /* BMUIManager.m */; };
+		C6309FCE1C399976007D82A4 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C6309FCD1C399976007D82A4 /* background.jpg */; };
+		C6A83AB01C38D3F500BB179C /* BMUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A83AAF1C38D3F500BB179C /* BMUserManager.m */; };
+		C6A83AB41C38D71700BB179C /* BMRegistrationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A83AB31C38D71700BB179C /* BMRegistrationVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,11 @@
 		AD92CB631C3878B8002F3F3C /* BMUIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMUIManager.h; path = UI/BMUIManager.h; sourceTree = "<group>"; };
 		AD92CB641C3878B8002F3F3C /* BMUIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMUIManager.m; path = UI/BMUIManager.m; sourceTree = "<group>"; };
 		BD5F5EDAC1FB874110A98416 /* Pods-BeautifulMinds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautifulMinds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeautifulMinds/Pods-BeautifulMinds.debug.xcconfig"; sourceTree = "<group>"; };
+		C6309FCD1C399976007D82A4 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		C6A83AAE1C38D3F500BB179C /* BMUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMUserManager.h; path = User/BMUserManager.h; sourceTree = "<group>"; };
+		C6A83AAF1C38D3F500BB179C /* BMUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMUserManager.m; path = User/BMUserManager.m; sourceTree = "<group>"; };
+		C6A83AB21C38D71700BB179C /* BMRegistrationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMRegistrationVC.h; path = Registration/BMRegistrationVC.h; sourceTree = "<group>"; };
+		C6A83AB31C38D71700BB179C /* BMRegistrationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMRegistrationVC.m; path = Registration/BMRegistrationVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +234,7 @@
 				AD92CB301C37837B002F3F3C /* Profile */,
 				AD92CB4B1C38585C002F3F3C /* StoryDetail */,
 				AD92CB531C38632A002F3F3C /* Base */,
+				C6A83AB51C38D71C00BB179C /* Registration */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -245,6 +254,7 @@
 				AD92CB211C377B4F002F3F3C /* Routing */,
 				AD92CB621C3869D9002F3F3C /* ThirdParty */,
 				AD92CB661C3878BC002F3F3C /* UI */,
+				C6A83AB11C38D3FA00BB179C /* User */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -307,6 +317,7 @@
 		AD92CB3A1C382CF3002F3F3C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				C6309FCC1C39976C007D82A4 /* Images */,
 				AD92CB571C3867AC002F3F3C /* Fonts */,
 				AD92CB3B1C382CF3002F3F3C /* PaintCode */,
 			);
@@ -403,6 +414,32 @@
 				AD92CB641C3878B8002F3F3C /* BMUIManager.m */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		C6309FCC1C39976C007D82A4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C6309FCD1C399976007D82A4 /* background.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		C6A83AB11C38D3FA00BB179C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C6A83AAE1C38D3F500BB179C /* BMUserManager.h */,
+				C6A83AAF1C38D3F500BB179C /* BMUserManager.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		C6A83AB51C38D71C00BB179C /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				C6A83AB21C38D71700BB179C /* BMRegistrationVC.h */,
+				C6A83AB31C38D71700BB179C /* BMRegistrationVC.m */,
+			);
+			name = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,6 +549,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6309FCE1C399976007D82A4 /* background.jpg in Resources */,
 				AD92CAF21C3778A3002F3F3C /* LaunchScreen.storyboard in Resources */,
 				AD92CAEF1C3778A3002F3F3C /* Assets.xcassets in Resources */,
 				AD92CB5E1C3867AC002F3F3C /* ProximaNova-Sbold.ttf in Resources */,
@@ -593,6 +631,7 @@
 				AD92CB4A1C385859002F3F3C /* BMStoryDetailVC.m in Sources */,
 				AD92CAE71C3778A3002F3F3C /* AppDelegate.m in Sources */,
 				AD92CB2F1C378375002F3F3C /* BMProfileVC.m in Sources */,
+				C6A83AB01C38D3F500BB179C /* BMUserManager.m in Sources */,
 				AD92CB3E1C382CF3002F3F3C /* BMPaintCode.m in Sources */,
 				AD92CB461C385583002F3F3C /* UIColor+BM.m in Sources */,
 				AD92CB611C3869D4002F3F3C /* BMThirdPartyManager.m in Sources */,
@@ -603,6 +642,7 @@
 				AD92CB271C377FFE002F3F3C /* BMHomeVC.m in Sources */,
 				AD92CAE41C3778A3002F3F3C /* main.m in Sources */,
 				AD92CB241C377B4F002F3F3C /* BMRoutingManager.m in Sources */,
+				C6A83AB41C38D71700BB179C /* BMRegistrationVC.m in Sources */,
 				AD92CB521C386324002F3F3C /* BMBaseNavBarVC.m in Sources */,
 				AD92CB391C37850C002F3F3C /* BMTabBarVIew.m in Sources */,
 				AD92CB561C386707002F3F3C /* UIFont+BM.m in Sources */,

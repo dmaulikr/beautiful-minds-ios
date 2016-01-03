@@ -8,6 +8,7 @@
 
 #import "BMRoutingManager.h"
 #import "BMUIManager.h"
+#import "BMUserManager.h"
 
 #import "UIColor+BM.h"
 #import "UIFont+BM.h"
