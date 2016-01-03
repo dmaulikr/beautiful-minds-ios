@@ -12,7 +12,12 @@
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *storyLabel;
+@property (nonatomic, strong) UILabel *readMoreLabel;
+@property (nonatomic, strong) UILabel *createdAtLabel;
+@property (nonatomic, strong) UIView *spacingView;
+@property (nonatomic, readwrite) CGFloat margin;
 
 -(void)setupCellWithObject:(PFObject *)object;
+-(CGFloat)getCellHeightWithObject:(PFObject *)object;
 
 @end

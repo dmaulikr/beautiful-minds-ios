@@ -86,25 +86,9 @@
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-  PFObject *object = dataArray[indexPath.item];
-  CGFloat titleHeight = 0;
-  CGFloat storyHeight = 0;
-  NSString *titleText = object[@"title"];
-  NSString *storyText = object[@"story"];
-  if (titleText.length > 0) {
-    titleHeight = [BMUIManager getHeightForString:titleText font:[UIFont BMTitleFontBoldWithSize:26] restrictedWidth:CGRectGetWidth(self.view.bounds)-40];
-  }
-  if (storyText.length > 0) {
-    storyHeight = [BMUIManager getHeightForString:storyText font:[UIFont BMTextFontWithSize:18] restrictedWidth:CGRectGetWidth(self.view.bounds)-40];
-  }
-  if (titleHeight > 130) {
-    titleHeight = 130;
-  }
-  if (storyHeight > 200) {
-    storyHeight = 200;
-  }
-  
-  return CGSizeMake(CGRectGetWidth(self.view.bounds), 20 + 20 + titleHeight + storyHeight);
+    BMPostCollectionViewCell *cell = [BMPostCollectionViewCell new];
+    PFObject *object = dataArray[indexPath.item];
+    return CGSizeMake(CGRectGetWidth(self.view.bounds), [cell getCellHeightWithObject:object]);
 }
 
 @end
