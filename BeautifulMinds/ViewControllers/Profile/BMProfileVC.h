@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BMProfileVC : UIViewController
+@interface BMProfileVC : UIViewController<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
+{
+    NSArray *dataArray;
+
+
+}
+@property (nonatomic, strong) UICollectionView *storyCollectionView;
+@property (nonatomic, strong) UIButton *settingBtn;
+
+
+-(void)getUserInfo;
+-(void)settingBtnPressed;
 @end

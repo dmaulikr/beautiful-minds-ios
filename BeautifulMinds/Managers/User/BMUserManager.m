@@ -46,6 +46,8 @@
     user[@"isBanned"] = @NO;
     user[@"isActive"] = @YES;
     user[@"abTesting"] = @"a";
+    user[@"stories"] = @[];
+    user[@"likedPosts"] = @[];
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (error) {
             callback(nil, error);

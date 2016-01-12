@@ -39,6 +39,10 @@
 -(void)setupParse {
   [Parse setApplicationId:@"UW2qENqkZ3jlovlgqtAbuQQRdQlkvvvVVlbAcWx8"
                 clientKey:@"pSHQlzfzteQMdu1xKQva2K2QNvfgBCsVov0N3dK3"];
+    if ([PFUser currentUser]) {
+        [[PFUser currentUser] fetchInBackground];
+    }
+    
 }
 
 @end

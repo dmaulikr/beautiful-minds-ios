@@ -33,7 +33,9 @@
 		AD92CB5E1C3867AC002F3F3C /* ProximaNova-Sbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD92CB5B1C3867AC002F3F3C /* ProximaNova-Sbold.ttf */; };
 		AD92CB611C3869D4002F3F3C /* BMThirdPartyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB601C3869D4002F3F3C /* BMThirdPartyManager.m */; };
 		AD92CB651C3878B8002F3F3C /* BMUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD92CB641C3878B8002F3F3C /* BMUIManager.m */; };
-		C6309FCE1C399976007D82A4 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C6309FCD1C399976007D82A4 /* background.jpg */; };
+		C6309FD01C39FC07007D82A4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C6309FCF1C39FC07007D82A4 /* background.png */; };
+		C6309FD31C3A435E007D82A4 /* BMProfileCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6309FD21C3A435E007D82A4 /* BMProfileCollectionReusableView.m */; };
+		C630A0871C44347C007D82A4 /* BMProfileEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C630A0861C44347C007D82A4 /* BMProfileEditVC.m */; };
 		C6A83AB01C38D3F500BB179C /* BMUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A83AAF1C38D3F500BB179C /* BMUserManager.m */; };
 		C6A83AB41C38D71700BB179C /* BMRegistrationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A83AB31C38D71700BB179C /* BMRegistrationVC.m */; };
 /* End PBXBuildFile section */
@@ -107,7 +109,11 @@
 		AD92CB631C3878B8002F3F3C /* BMUIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMUIManager.h; path = UI/BMUIManager.h; sourceTree = "<group>"; };
 		AD92CB641C3878B8002F3F3C /* BMUIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMUIManager.m; path = UI/BMUIManager.m; sourceTree = "<group>"; };
 		BD5F5EDAC1FB874110A98416 /* Pods-BeautifulMinds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeautifulMinds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeautifulMinds/Pods-BeautifulMinds.debug.xcconfig"; sourceTree = "<group>"; };
-		C6309FCD1C399976007D82A4 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		C6309FCF1C39FC07007D82A4 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		C6309FD11C3A435E007D82A4 /* BMProfileCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMProfileCollectionReusableView.h; path = CollectionViewReusableViews/BMProfileCollectionReusableView.h; sourceTree = "<group>"; };
+		C6309FD21C3A435E007D82A4 /* BMProfileCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMProfileCollectionReusableView.m; path = CollectionViewReusableViews/BMProfileCollectionReusableView.m; sourceTree = "<group>"; };
+		C630A0851C44347C007D82A4 /* BMProfileEditVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMProfileEditVC.h; path = Profile/BMProfileEditVC.h; sourceTree = "<group>"; };
+		C630A0861C44347C007D82A4 /* BMProfileEditVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMProfileEditVC.m; path = Profile/BMProfileEditVC.m; sourceTree = "<group>"; };
 		C6A83AAE1C38D3F500BB179C /* BMUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMUserManager.h; path = User/BMUserManager.h; sourceTree = "<group>"; };
 		C6A83AAF1C38D3F500BB179C /* BMUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMUserManager.m; path = User/BMUserManager.m; sourceTree = "<group>"; };
 		C6A83AB21C38D71700BB179C /* BMRegistrationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMRegistrationVC.h; path = Registration/BMRegistrationVC.h; sourceTree = "<group>"; };
@@ -291,6 +297,8 @@
 			children = (
 				AD92CB2D1C378375002F3F3C /* BMProfileVC.h */,
 				AD92CB2E1C378375002F3F3C /* BMProfileVC.m */,
+				C630A0851C44347C007D82A4 /* BMProfileEditVC.h */,
+				C630A0861C44347C007D82A4 /* BMProfileEditVC.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -301,6 +309,7 @@
 				AD92CB361C37850C002F3F3C /* TabBar */,
 				AD92CB431C3849D0002F3F3C /* CollectionViewCells */,
 				AD92CB4F1C385CA3002F3F3C /* NavBar */,
+				C6309FD41C3A4362007D82A4 /* CollectionViewReusableViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -419,9 +428,18 @@
 		C6309FCC1C39976C007D82A4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				C6309FCD1C399976007D82A4 /* background.jpg */,
+				C6309FCF1C39FC07007D82A4 /* background.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		C6309FD41C3A4362007D82A4 /* CollectionViewReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				C6309FD11C3A435E007D82A4 /* BMProfileCollectionReusableView.h */,
+				C6309FD21C3A435E007D82A4 /* BMProfileCollectionReusableView.m */,
+			);
+			name = CollectionViewReusableViews;
 			sourceTree = "<group>";
 		};
 		C6A83AB11C38D3FA00BB179C /* User */ = {
@@ -549,11 +567,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6309FCE1C399976007D82A4 /* background.jpg in Resources */,
 				AD92CAF21C3778A3002F3F3C /* LaunchScreen.storyboard in Resources */,
 				AD92CAEF1C3778A3002F3F3C /* Assets.xcassets in Resources */,
 				AD92CB5E1C3867AC002F3F3C /* ProximaNova-Sbold.ttf in Resources */,
 				AD92CB5C1C3867AC002F3F3C /* ProximaNova-Bold.ttf in Resources */,
+				C6309FD01C39FC07007D82A4 /* background.png in Resources */,
 				AD92CB5D1C3867AC002F3F3C /* ProximaNova-Reg.ttf in Resources */,
 				AD92CAED1C3778A3002F3F3C /* Main.storyboard in Resources */,
 			);
@@ -637,11 +655,13 @@
 				AD92CB611C3869D4002F3F3C /* BMThirdPartyManager.m in Sources */,
 				AD92CB2B1C378163002F3F3C /* BMWriteVC.m in Sources */,
 				AD92CB1C1C377AD1002F3F3C /* BMRootVC.m in Sources */,
+				C630A0871C44347C007D82A4 /* BMProfileEditVC.m in Sources */,
 				AD92CB4E1C385C9C002F3F3C /* BMNavBarView.m in Sources */,
 				AD92CB421C3849CC002F3F3C /* BMPostCollectionViewCell.m in Sources */,
 				AD92CB271C377FFE002F3F3C /* BMHomeVC.m in Sources */,
 				AD92CAE41C3778A3002F3F3C /* main.m in Sources */,
 				AD92CB241C377B4F002F3F3C /* BMRoutingManager.m in Sources */,
+				C6309FD31C3A435E007D82A4 /* BMProfileCollectionReusableView.m in Sources */,
 				C6A83AB41C38D71700BB179C /* BMRegistrationVC.m in Sources */,
 				AD92CB521C386324002F3F3C /* BMBaseNavBarVC.m in Sources */,
 				AD92CB391C37850C002F3F3C /* BMTabBarVIew.m in Sources */,

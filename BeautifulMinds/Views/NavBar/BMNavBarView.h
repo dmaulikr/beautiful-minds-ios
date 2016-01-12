@@ -18,6 +18,7 @@
 -(void)leftBtnIsBack;
 -(void)setupForHomePage;
 -(void)setupForWriteVC;
+-(void)setupForProfileEditVC;
 -(void)setupForRegiatrationVC;
 -(void)rightBtnIsSubmit;
 

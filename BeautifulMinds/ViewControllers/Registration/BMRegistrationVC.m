@@ -7,6 +7,9 @@
 //
 
 #import "BMRegistrationVC.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <PFFacebookUtils.h>
 
 @interface BMRegistrationVC ()
 
@@ -20,6 +23,7 @@
     
     [self setupNavBar];
     [self setupTextFields];
+    [self setupFacebookLoginAndSignUp];
 }
 
 -(void)setupNavBar {
@@ -128,6 +132,43 @@
     {
         return NO;
     }
+}
+
+-(void)setupFacebookLoginAndSignUp {
+    self.facebookBtn = [[FBSDKLoginButton alloc]init];
+    self.facebookBtn.frame = CGRectMake(50, CGRectGetMaxY(self.actionBtn.frame)+30, CGRectGetWidth(self.view.bounds)-100, 40);
+    self.facebookBtn.readPermissions = @[@"public_profile", @"email", @"user_friends"];
+    [self.view addSubview:self.facebookBtn];
+    self.facebookBtn.delegate = self;
+}
+
+- (void)  loginButton:(FBSDKLoginButton *)loginButton
+didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
+                error:(NSError *)error {
+    
+    if(error) {
+        [SVProgressHUD showErrorWithStatus:error.localizedDescription];
+        return;
+    }
+    
+    [self loginToParseFBWithToken:result.token];
+    
+}
+
+-(void)loginToParseFBWithToken: (FBSDKAccessToken *)accessToken {
+    
+    // Log In (create/update currentUser) with FBSDKAccessToken
+    [PFFacebookUtils logInInBackgroundWithAccessToken:accessToken
+                                                block:^(PFUser *user, NSError *error) {
+                                                    if (!user) {
+                                                        NSLog(@"Uh oh. There was an error logging in.");
+                                                    } else {
+                                                        NSLog(@"User logged in through Facebook!");
+                                                    }
+                                                }];
+}
+-(void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
+    
 }
 
 @end

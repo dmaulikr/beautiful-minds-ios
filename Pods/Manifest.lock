@@ -43,6 +43,11 @@ PODS:
     - TUSafariActivity (= 1.0.4)
   - Parse (1.11.0):
     - Bolts/Tasks (~> 1.5)
+  - ParseFacebookUtilsV4 (1.9.1):
+    - Bolts/Tasks (>= 1.5)
+    - FBSDKCoreKit (~> 4.8)
+    - FBSDKLoginKit (~> 4.8)
+    - Parse (~> 1.9)
   - ReactiveCocoa (2.4.7):
     - ReactiveCocoa/UI (= 2.4.7)
   - ReactiveCocoa/Core (2.4.7):
@@ -64,6 +69,7 @@ DEPENDENCIES:
   - Firebase
   - KINWebBrowser
   - Parse
+  - ParseFacebookUtilsV4
   - ReactiveCocoa (= 2.4.7)
   - SVProgressHUD
 
@@ -80,6 +86,7 @@ SPEC CHECKSUMS:
   Firebase: 744617c0733b45198f9486ebd5cac64ec2d10d79
   KINWebBrowser: 27aa857a2aa39063ed102cca781d130b679d205f
   Parse: 886af46a0a677402f6374bb97ac212e795f70afe
+  ParseFacebookUtilsV4: eab9b4ade12f0800b4d30f6b808bca55ce17a0e9
   ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   TUSafariActivity: afc55a00965377939107ce4fdc7f951f62454546

@@ -24,7 +24,7 @@
     [self addSubview:self.leftBtn];
     
     self.centerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.centerBtn setFrame:CGRectMake(self.center.x-44, 20, 88, 44)];
+    [self.centerBtn setFrame:CGRectMake(self.center.x-66, 20, 132, 44)];
     [self addSubview:self.centerBtn];
     
     self.rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -54,6 +54,9 @@
   
 }
 
+-(void)setupForProfileEditVC {
+    [self rightBtnIsSubmit];
+}
 -(void)setupForRegiatrationVC {
     self.registrationSegment = [[UISegmentedControl alloc]initWithItems:@[@"LOGIN",@"SIGN UP"]];
     self.registrationSegment.center = CGPointMake(CGRectGetWidth(self.bounds)/2, CGRectGetHeight(self.bounds)/2+10);

@@ -316,11 +316,103 @@ static UIImage* _imageOfIconSubmitBlack = nil;
 
 + (void)drawIconOfLogo
 {
+    //// General Declarations
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    //// Color Declarations
+    UIColor* color = [UIColor colorWithRed: 1 green: 0.462 blue: 0.073 alpha: 1];
+    
+    //// Shadow Declarations
+    NSShadow* shadow = [[NSShadow alloc] init];
+    [shadow setShadowColor: [color colorWithAlphaComponent: CGColorGetAlpha(color.CGColor) * 0.43]];
+    [shadow setShadowOffset: CGSizeMake(3.1, -4.1)];
+    [shadow setShadowBlurRadius: 3];
+    
+    //// Star Drawing
+    UIBezierPath* starPath = [UIBezierPath bezierPath];
+    [starPath moveToPoint: CGPointMake(224.5, 11)];
+    [starPath addLineToPoint: CGPointMake(232.58, 27.38)];
+    [starPath addLineToPoint: CGPointMake(250.65, 30)];
+    [starPath addLineToPoint: CGPointMake(237.58, 42.75)];
+    [starPath addLineToPoint: CGPointMake(240.66, 60.75)];
+    [starPath addLineToPoint: CGPointMake(224.5, 52.25)];
+    [starPath addLineToPoint: CGPointMake(208.34, 60.75)];
+    [starPath addLineToPoint: CGPointMake(211.42, 42.75)];
+    [starPath addLineToPoint: CGPointMake(198.35, 30)];
+    [starPath addLineToPoint: CGPointMake(216.42, 27.38)];
+    [starPath closePath];
+    [color setFill];
+    [starPath fill];
+    CGContextSaveGState(context);
+    CGContextSetShadowWithColor(context, shadow.shadowOffset, shadow.shadowBlurRadius, [shadow.shadowColor CGColor]);
+    [color setStroke];
+    starPath.lineWidth = 2;
+    [starPath stroke];
+    CGContextRestoreGState(context);
+    
+    
+    //// Star 2 Drawing
+    UIBezierPath* star2Path = [UIBezierPath bezierPath];
+    [star2Path moveToPoint: CGPointMake(269, 38.25)];
+    [star2Path addLineToPoint: CGPointMake(274.22, 48.82)];
+    [star2Path addLineToPoint: CGPointMake(285.88, 50.51)];
+    [star2Path addLineToPoint: CGPointMake(277.44, 58.74)];
+    [star2Path addLineToPoint: CGPointMake(279.43, 70.36)];
+    [star2Path addLineToPoint: CGPointMake(269, 64.88)];
+    [star2Path addLineToPoint: CGPointMake(258.57, 70.36)];
+    [star2Path addLineToPoint: CGPointMake(260.56, 58.74)];
+    [star2Path addLineToPoint: CGPointMake(252.12, 50.51)];
+    [star2Path addLineToPoint: CGPointMake(263.78, 48.82)];
+    [star2Path closePath];
+    [color setFill];
+    [star2Path fill];
+    CGContextSaveGState(context);
+    CGContextSetShadowWithColor(context, shadow.shadowOffset, shadow.shadowBlurRadius, [shadow.shadowColor CGColor]);
+    [color setStroke];
+    star2Path.lineWidth = 2;
+    [star2Path stroke];
+    CGContextRestoreGState(context);
+    
+    
+    //// Star 3 Drawing
+    UIBezierPath* star3Path = [UIBezierPath bezierPath];
+    [star3Path moveToPoint: CGPointMake(244, 68.75)];
+    [star3Path addLineToPoint: CGPointMake(247.01, 74.85)];
+    [star3Path addLineToPoint: CGPointMake(253.75, 75.83)];
+    [star3Path addLineToPoint: CGPointMake(248.87, 80.58)];
+    [star3Path addLineToPoint: CGPointMake(250.02, 87.29)];
+    [star3Path addLineToPoint: CGPointMake(244, 84.12)];
+    [star3Path addLineToPoint: CGPointMake(237.98, 87.29)];
+    [star3Path addLineToPoint: CGPointMake(239.13, 80.58)];
+    [star3Path addLineToPoint: CGPointMake(234.25, 75.83)];
+    [star3Path addLineToPoint: CGPointMake(240.99, 74.85)];
+    [star3Path closePath];
+    [color setFill];
+    [star3Path fill];
+    CGContextSaveGState(context);
+    CGContextSetShadowWithColor(context, shadow.shadowOffset, shadow.shadowBlurRadius, [shadow.shadowColor CGColor]);
+    [color setStroke];
+    star3Path.lineWidth = 2;
+    [star3Path stroke];
+    CGContextRestoreGState(context);
+    
+    
+    //// Text Drawing
+    CGRect textRect = CGRectMake(14, 2, 193, 100);
+    {
+        NSString* textContent = @"BEAUTIFUL MINDS";
+        NSMutableParagraphStyle* textStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
+        textStyle.alignment = NSTextAlignmentLeft;
+        
+        NSDictionary* textFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"Copperplate" size: 31], NSForegroundColorAttributeName: color, NSParagraphStyleAttributeName: textStyle};
+        
+        CGFloat textTextHeight = [textContent boundingRectWithSize: CGSizeMake(textRect.size.width, INFINITY)  options: NSStringDrawingUsesLineFragmentOrigin attributes: textFontAttributes context: nil].size.height;
+        CGContextSaveGState(context);
+        CGContextClipToRect(context, textRect);
+        [textContent drawInRect: CGRectMake(CGRectGetMinX(textRect), CGRectGetMinY(textRect) + (CGRectGetHeight(textRect) - textTextHeight) / 2, CGRectGetWidth(textRect), textTextHeight) withAttributes: textFontAttributes];
+        CGContextRestoreGState(context);
+    }
 
-    //// Rectangle Drawing
-    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(66, 16, 59, 72)];
-    [UIColor.grayColor setFill];
-    [rectanglePath fill];
 }
 
 + (void)drawIconSubmitBlack
@@ -454,7 +546,7 @@ static UIImage* _imageOfIconSubmitBlack = nil;
     if (_imageOfIconOfLogo)
         return _imageOfIconOfLogo;
 
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(200, 100), NO, 0.0f);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(300, 100), NO, 0.0f);
     [BMPaintCode drawIconOfLogo];
 
     _imageOfIconOfLogo = UIGraphicsGetImageFromCurrentImageContext();

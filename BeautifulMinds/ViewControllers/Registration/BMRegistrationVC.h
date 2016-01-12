@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BMRegistrationVC : BMBaseNavBarVC
+@interface BMRegistrationVC : BMBaseNavBarVC <FBSDKLoginButtonDelegate>
 
 @property (nonatomic, strong) UITextField *emailTextField;
 @property (nonatomic, strong) UITextField *passwordTextField;
 
 @property (nonatomic, strong) UIButton *actionBtn;
+@property (nonatomic, strong) FBSDKLoginButton *facebookBtn;
 
 @end

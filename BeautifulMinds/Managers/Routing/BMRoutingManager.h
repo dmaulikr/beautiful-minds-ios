@@ -20,7 +20,8 @@
 -(void)goToWriteVC;
 -(void)goToHomeVC;
 -(void)goToStoryDetailVCFromHomeVC:(PFObject *)storyObject;
-
+-(void)goToStoryDetailVCFromProfileVC:(PFObject *)storyObject;
+-(void)goToProfileEditVCFromProfileVC;
 -(void)showTabBar:(BOOL)show;
 
 @end
