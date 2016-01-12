@@ -35,7 +35,7 @@
 
 -(void)addBackgroundBlurAnimation {
     backgroundImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds),CGRectGetHeight(self.view.bounds)*2)];
-    backgroundImageView.image = [UIImage imageNamed:@"background.jpg"];
+    backgroundImageView.image = [UIImage imageNamed:@"background.png"];
     backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.view addSubview:backgroundImageView];
     backgroundImageView.hidden = YES;

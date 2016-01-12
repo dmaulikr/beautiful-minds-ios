@@ -12,11 +12,13 @@
 #import "BMProfileVC.h"
 #import "BMStoryDetailVC.h"
 #import "BMRegistrationVC.h"
+#import "BMProfileEditVC.h"
 
 @interface BMRoutingManager ()
 
 @property (nonatomic, strong) UINavigationController *homeNavVC;
 @property (nonatomic, strong) BMWriteVC *writeVC;
+@property (nonatomic, strong) UINavigationController *profileNavVC;
 @property (nonatomic, strong) BMProfileVC *profileVC;
 
 @end
@@ -71,16 +73,25 @@
 }
 
 -(void)initProfileVC {
-  self.profileVC = [[BMProfileVC alloc]init];
-  [self.rootVC addChildViewController:self.profileVC];
-  [self.rootVC.view addSubview:self.profileVC.view];
+    self.profileVC = [[BMProfileVC alloc]init];
+    self.profileNavVC = [[UINavigationController alloc]initWithRootViewController:self.profileVC];
+    [self.rootVC addChildViewController:self.profileNavVC];
+    [self.rootVC.view addSubview:self.profileNavVC.view];
 }
 
 -(void)goToProfileVC {
-  if (self.profileVC) {
-    [self.rootVC.view bringSubviewToFront:self.profileVC.view];
+    
+    if (![[BMUserManager shared]isCurrentUser]) {
+        BMRegistrationVC *registrationVC = [BMRegistrationVC new];
+        [self.rootVC presentViewController:registrationVC animated:YES completion:nil];
+        return;
+    }
+    
+  if (self.profileNavVC) {
+    [self.rootVC.view bringSubviewToFront:self.profileNavVC.view];
     [self.rootVC.view bringSubviewToFront:self.rootVC.tabBar];
     [self.rootVC.tabBar selectBtnWithIndex:2];
+    [self.profileVC getUserInfo];
   }
 }
 
@@ -102,7 +113,6 @@
     }
     
     if (self.writeVC) {
-        [[PFUser currentUser] fetchInBackground];
         [self.rootVC.view bringSubviewToFront:self.writeVC.view];
         [self.rootVC.view bringSubviewToFront:self.rootVC.tabBar];
         [self.rootVC.tabBar selectBtnWithIndex:1];
@@ -117,6 +127,23 @@
     [self showTabBar:NO];
   }
 }
+
+-(void)goToStoryDetailVCFromProfileVC:(PFObject *) storyObject {
+    BMStoryDetailVC *storyDetailVC = [[BMStoryDetailVC alloc]initWithStoryObject:storyObject];
+    if (self.profileNavVC) {
+        [self.profileNavVC pushViewController:storyDetailVC animated:YES];
+        [self showTabBar:NO];
+    }
+}
+
+-(void)goToProfileEditVCFromProfileVC {
+    BMProfileEditVC *profileEditVC = [[BMProfileEditVC alloc]init];
+        if (self.profileNavVC) {
+        [self.profileNavVC pushViewController:profileEditVC animated:YES];
+        [self showTabBar:NO];
+    }
+}
+
 
 -(void)showTabBar:(BOOL)show {
   self.rootVC.tabBar.hidden = !show;
